@@ -1,8 +1,8 @@
 const hh = require("hyperscript-helpers");
 const { h, diff, patch } = require("virtual-dom");
 const createElement = require("virtual-dom/create-element");
-const update = require("./Update.js");
 const view = require("./view.js");
+const update = require("./Update.js");
 
 const { div, button } = hh(h);
 
