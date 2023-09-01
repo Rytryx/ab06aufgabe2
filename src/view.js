@@ -1,4 +1,4 @@
-import hh from "hyperscript-helpers";
+const hh = require("hyperscript-helpers");
 
 const { div, button } = hh(h);
 
@@ -13,5 +13,4 @@ function view(dispatch, model) {
   ]);
 }
 
-export default view;
-aaa
+module.exports = view;

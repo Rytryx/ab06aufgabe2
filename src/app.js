@@ -1,6 +1,8 @@
-import hh from "hyperscript-helpers";
-import { h, diff, patch } from "virtual-dom";
-import createElement from "virtual-dom/create-element";
+const hh = require("hyperscript-helpers");
+const { h, diff, patch } = require("virtual-dom");
+const createElement = require("virtual-dom/create-element");
+const update = require("./Update.js");
+const view = require("./view.js");
 
 const { div, button } = hh(h);
 
@@ -9,7 +11,7 @@ const MSGS = {
   SUBTRACT: "SUBTRACT",
 };
 
-// impure code below (not avoidable but controllable)
+// Impure code below (not avoidable but controllable)
 function app(initModel, update, view, node) {
   let model = initModel;
   let currentView = view(dispatch, model);
